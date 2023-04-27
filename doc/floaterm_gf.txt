@@ -1,0 +1,12 @@
+*floaterm_gf.txt*  Plugin for gf and gF in floaterm
+
+Mappings:
+
+Go to file                                  *floaterm_gf_go_to_file*
+Default mapping: gf
+Mapped to: <Plug>FloatermGotoFile;
+
+
+Go to file and line                         *floaterm_gf_go_to_file_and_line*
+Default mapping: gF
+Mapped to: <Plug>FloatermGotoFileAndLine;
