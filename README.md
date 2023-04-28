@@ -13,3 +13,5 @@ respectively, but you can override these by creating your own mappings:
 nnoremap <your_own_mapping_gf> <Plug>FloatermGotoFile;
 nnoremap <your_own_mapping_gF> <Plug>FloatermGotoFileAndLine;
 ```
+
+![Using gf in floaterm](resources/gf.gif)
