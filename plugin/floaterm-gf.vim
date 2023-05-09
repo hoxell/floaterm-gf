@@ -39,15 +39,8 @@ function! s:openInNormalWindowGoToLine() abort
     call cursor(l:line_number, l:column_number ? l:column_number : 0)
 endfunction
 
-if !hasmapto('<Plug>FloatermGotoFile;')
-    nnoremap <unique> gf <Plug>FloatermGotoFile;
-endif
-if !hasmapto('<Plug>FloatermGotoFileAndLine;')
-    nnoremap <unique> gF <Plug>FloatermGotoFileAndLine;
-endif
-
 augroup floaterm_gf
     au!
-    autocmd FileType floaterm nnoremap <silent> <buffer> <Plug>FloatermGotoFile; :call <SID>openInNormalWindow()<CR>
-    autocmd FileType floaterm nnoremap <silent> <buffer> <Plug>FloatermGotoFileAndLine; :call <SID>openInNormalWindowGoToLine()<CR>
+    autocmd FileType floaterm if !hasmapto('<Plug>FloatermGotoFile;') | nnoremap <unique> <buffer> gf <Plug>FloatermGotoFile; | endif | nnoremap <silent> <buffer>  <Plug>FloatermGotoFile; :call <SID>openInNormalWindow()<CR>
+    autocmd FileType floaterm if !hasmapto('<Plug>FloatermGotoFileAndLine;') | nnoremap <unique> <buffer> gF <Plug>FloatermGotoFileAndLine; | endif | nnoremap <silent> <buffer> <Plug>FloatermGotoFileAndLine; :call <SID>openInNormalWindowGoToLine()<CR>
 augroup END
