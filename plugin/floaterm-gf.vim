@@ -41,6 +41,6 @@ endfunction
 
 augroup floaterm_gf
     au!
-    autocmd FileType floaterm if !hasmapto('<Plug>FloatermGotoFile;') | nnoremap <unique> <buffer> gf <Plug>FloatermGotoFile; | endif | nnoremap <silent> <buffer>  <Plug>FloatermGotoFile; :call <SID>openInNormalWindow()<CR>
-    autocmd FileType floaterm if !hasmapto('<Plug>FloatermGotoFileAndLine;') | nnoremap <unique> <buffer> gF <Plug>FloatermGotoFileAndLine; | endif | nnoremap <silent> <buffer> <Plug>FloatermGotoFileAndLine; :call <SID>openInNormalWindowGoToLine()<CR>
+    autocmd FileType floaterm if !hasmapto('<Plug>FloatermGotoFile;') | nnoremap <unique> <buffer> gf <Plug>FloatermGotoFile;| endif | nnoremap <silent> <buffer>  <Plug>FloatermGotoFile; :call <SID>openInNormalWindow()<CR>
+    autocmd FileType floaterm if !hasmapto('<Plug>FloatermGotoFileAndLine;') | nnoremap <unique> <buffer> gF <Plug>FloatermGotoFileAndLine;| endif | nnoremap <silent> <buffer> <Plug>FloatermGotoFileAndLine; :call <SID>openInNormalWindowGoToLine()<CR>
 augroup END
